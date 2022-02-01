@@ -15,7 +15,7 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color: #d3d3d3;
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
@@ -37,7 +37,7 @@ body {
   }
   
   .hour {
-    background-color: #ffffff;
+    background-color: #685d5d;
     color: #000000;
     border-top: 1px dashed #000000;
   }
@@ -65,8 +65,17 @@ body {
     color: white;
   }
   
-  .saveBtn i:hover {
+  .saveBtn:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
   
+
+  /* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
