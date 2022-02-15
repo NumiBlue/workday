@@ -28,18 +28,20 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div class="container" class="row border-block">
       <!-- Timeblocks go here -->
-      <div class="row">
-        <div id= "time08" class="col-sm d-flex border time-block">8am</div>
+      <!-- hour -->
+      <div class="col-2 hour my-auto">8am
+      </div>
+      <div id= "time08" class="col-sm d-flex border">8am</div>
         <textarea id="text08"  class="col-8 border content"></textarea>
         <button id="btn08" class="col-1 btn btn-info"></button>
       </div>
-      <div id= "time09" class="col-sm d-flex border time-block">9am</div>
+      <div id= "time09" class="col-sm d-flex border">9am</div>
         <textarea id="text09"  class="col-8 border content"></textarea>
         <button id="btn09" class="col-1 btn btn-info"></button>
       </div>
-      <div id= "time10" class="col-sm d-flex border time-block">10am</div>
+      <div id= "time10" class="col-sm d-flex border">10am</div>
         <textarea id="text10"  class="col-8 border content"></textarea>
         <button id="btn10" class="col-1 btn btn-info"></button>
       </div>
@@ -85,7 +87,7 @@
       </div>
 
       </div>
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
