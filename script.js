@@ -3,7 +3,7 @@
 
 //Use js to influnce the css colors according to current time
 //-get current time, get syntax for changing according to current time- military time.. for loop
-//Click enable save button (universal listener, apply to .btn)
+
 //Save button saves to local storage 
 //Local storage loads events when refreshed (key as time, value as string, use for loop)
 
@@ -17,8 +17,13 @@ $("#btn08").click(function() {
     var text = $('textarea#text08').val();
     //Save in Innerhtml
 $(".selector").html("Your text here");
+//grab schedule from local storage
+var timeTable = JSON.parse(localStorage.getItem("schedule"));
+//update value for hour08
+timeTable.task[0] = text;
+//change task array and update text
     //send to server and process response
-    localStorage.setItem('text08', text);
+    localStorage.setItem('schedule', JSON.stringify(timeTable));
 });
 
 //Call on page load
@@ -33,5 +38,6 @@ $(document).ready(function () {
                 "","","","","","","","","","","","",""
             ],
         }; localStorage.setItem("schedule",JSON.stringify(timeTable));
-    }
+    } 
+    //create a loop and update textarea for each hour with data saved in local storage
   });
