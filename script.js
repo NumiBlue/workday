@@ -11,21 +11,6 @@
 const dateTime = moment()
 $("#moment").text(dateTime);
 
-//Set local storage
-//localStorage.setItem(keyname, value)
-const localStorage = function(){
-    var timeTable = JSON.parse(localStorage.getItem("schedule"));
-    if (!timeTable) {
-        timeTable = {
-            schedule: [
-                08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-            ],
-            task: [
-                "","","","","","","","","","","","",""
-            ],
-        }
-    }
-};
 
 //Save Button
 $("#btn08").click(function() {
@@ -35,3 +20,18 @@ $(".selector").html("Your text here");
     //send to server and process response
     localStorage.setItem('text08', text);
 });
+
+//Call on page load
+$(document).ready(function () {
+    var timeTable = JSON.parse(localStorage.getItem("schedule"));
+    if (!timeTable) {
+        timeTable = {
+            hour: [
+                08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+            ],
+            task: [
+                "","","","","","","","","","","","",""
+            ],
+        }; localStorage.setItem("schedule",JSON.stringify(timeTable));
+    }
+  });
